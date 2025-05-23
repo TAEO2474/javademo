@@ -1,0 +1,38 @@
+package java011_casting.part05;
+
+class ExamA {
+	void prn() {
+	}
+}
+
+class ExamB extends ExamA {
+	void prn() {
+	}
+}
+
+class ExamC extends ExamB {
+	void prn() {
+	}
+}
+
+public class Java114_instanceof {
+
+	public static void main(String[] args) {
+		//객체  instanceof  비교 데이터 타입과 같거나 조상데이터 타입  
+		//////////////////////////////////////////////////
+		ExamB bb = new ExamB();
+		System.out.println(bb instanceof ExamA); //true (bb가 ExamA의 instance(객체)입니까?)
+		
+		///////////////////////////////////////////////////
+		ExamA aa = new ExamA();
+		System.out.println(aa instanceof ExamB); //false
+		
+		/////////////////////////////////////////////////////
+		ExamA ea = new ExamB();
+		System.out.println(ea instanceof ExamA); //true
+		System.out.println(ea instanceof ExamB); //true
+		System.out.println(ea instanceof ExamC); //false
+		System.out.println(ea instanceof Object); //true		
+	}//end main()
+
+}//end class
