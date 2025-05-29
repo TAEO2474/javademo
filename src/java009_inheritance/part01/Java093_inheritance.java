@@ -27,7 +27,7 @@ package java009_inheritance.part01;
 public class Java093_inheritance {
 
 	public static void main(String[] args) {
-		// 포함관계 (has a 관계)
+		//  상속관계 (is-a 관계)
 		Father father = new Father(); // Father객체생성 
 		
 		Child child = new Child(); // Child 객체생성
