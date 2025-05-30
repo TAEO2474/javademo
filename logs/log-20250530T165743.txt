@@ -1,0 +1,4 @@
+2025-05-30 16:57:43,805 - java023_logging.part1.Test -debug message
+2025-05-30 16:57:43,807 - java023_logging.part1.Test -info message
+2025-05-30 16:57:43,807 - java023_logging.part1.Test -message
+2025-05-30 16:57:43,807 - java023_logging.part1.Test -warnror message

@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-import java021_jdbc.template.JdbcTemplate;
-
 public class DepartmentsService {
 	DepartmentsDAO dao = null;
 	
@@ -29,6 +27,25 @@ public class DepartmentsService {
 			JdbcTemplate.close(conn);
 		}
 		return alist;
-	}
+	}//end getDepartmentsList() 메소드
 	
-}
+	public  List<DepartmentDTO> getSearchList(String search) {
+		List<DepartmentDTO> alist = null;
+		Connection conn = JdbcTemplate.getConnection();
+		dao = DepartmentsDAO.getInstance();
+		
+		try {
+			conn.setAutoCommit(false);
+			alist = dao.getSearchMthod(conn, search);
+			JdbcTemplate.commit(conn);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			JdbcTemplate.rollback(conn);
+		} finally {
+			JdbcTemplate.close(conn);
+		}
+	     return alist;
+	}// end getSearchList() 메소드
+	
+	
+}// end class

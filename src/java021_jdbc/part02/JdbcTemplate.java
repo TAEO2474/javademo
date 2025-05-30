@@ -1,4 +1,4 @@
-package java021_jdbc.template;
+package java021_jdbc.part02;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
