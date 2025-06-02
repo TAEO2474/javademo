@@ -18,7 +18,7 @@ https://projectlombok.org/features/
    Add External JARs... > lombok.jar > Apply and Close
 8. eclipse.ini 아래에
     -vmargs
-    -javaagent:D:\ai_chatbot\util\eclipse\lombok.jar  
+    -javaagent:D:\ai_chatbot\util\eclipse\lombok.jar    -javaagent:C:\web_ai\util\eclipse\lombok.jar   
 9.  프로젝트에서 빨강줄이 나오면 프로젝트선택후 > Project > Clean >Clean
 
 [3] lombok.config설정
